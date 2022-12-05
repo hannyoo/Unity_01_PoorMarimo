@@ -98,7 +98,7 @@ public class Marimo_C : MonoBehaviour
         
         hpBarUI = GetComponentInChildren<hpBarUI>();
 
-        hpBarUI.SetTotalHP(HP);
+        hpBarUI.SetTotalHP(HP); //??
         hpBarUI.SetCurHP(HP);
 
         hpBarUI.SetName(playername);
@@ -120,16 +120,12 @@ public class Marimo_C : MonoBehaviour
                    
         }
 
-        //?? 안나타남 ㅠ
+        ////?? 안나타남 ㅠ
         ShopUI_C shopUI = collision.gameObject.GetComponent<ShopUI_C > ();
         if (shopUI)
         {
-            
-            
+            shopUI.OpenShop();
 
-            Object shop_UI = Resources.Load("shop_UI");
-            Instantiate(shop_UI, transform);
-            
         }
 
     }
@@ -146,6 +142,14 @@ public class Marimo_C : MonoBehaviour
             monster.onDamaged(this); //??
                       
         }
+
+        ShopUI_C shopUI = collision.gameObject.GetComponent<ShopUI_C>();
+        if (shopUI)
+        {
+            shopUI.CloseShop();
+
+        }
+
     }
 
 
