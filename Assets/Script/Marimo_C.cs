@@ -17,11 +17,10 @@ public class Marimo_C : MonoBehaviour
 
     //hp¹Ù
     hpBarUI hpBarUI;
-    ShopUI_C shopUI;
+    
 
-    MonsterHpBarUI monsterHpBar;
-
-    //
+   
+    //////////// Move
 
     Animator anim;
     Rigidbody rigid;
@@ -35,7 +34,7 @@ public class Marimo_C : MonoBehaviour
     
 
 
- //////////// Move
+    //////////// Move
 
     private void Awake()
     {
@@ -83,7 +82,7 @@ public class Marimo_C : MonoBehaviour
        
     }
 
-////////////
+    ////////////
 
     private void Start()
     {
