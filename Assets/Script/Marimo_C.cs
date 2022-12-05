@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Marimo_C : MonoBehaviour
 {
+    public InputField playername_ipf;
+
     public string playername;
-   
+
     public float speed;
        
     public int HP;
@@ -40,6 +44,8 @@ public class Marimo_C : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
+
+        
     }
 
     void Update()

@@ -12,8 +12,6 @@ public class StageManager_C : MonoBehaviour
     }
 
   
-
-
         public void MonsterGen()
         {
             GameObject monster = Resources.Load<GameObject>("Slime 1");
@@ -30,4 +28,5 @@ public class StageManager_C : MonoBehaviour
                 Instantiate(monster, new Vector3(40 + randomX, 3, 100 + randomZ), monster.transform.rotation);
             }
         }
+
     }

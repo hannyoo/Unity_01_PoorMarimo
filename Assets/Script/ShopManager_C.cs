@@ -13,15 +13,10 @@ public class ShopManager_C : MonoBehaviour
     //ShopItem_C Attack = new ShopItem_C("Attack", 100);
     //ShopItem_C Deffence = new ShopItem_C("Deffence", 70);
 
-     
-
     private void Awake()
     {
         instance = this;
     }
-
-    
-
 
 
 }

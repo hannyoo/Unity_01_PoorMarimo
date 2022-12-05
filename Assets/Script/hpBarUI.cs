@@ -33,10 +33,21 @@ public class hpBarUI : MonoBehaviour
 
 
     }
-    
+    private void Start()
+    {
+      // hpBar=GetComponent<Slider>();
+        playerName.text = "***";
+       
+    }
 
-   private void Update()
+
+    private void Update()
    {
+        if (Camera.main == null)
+        { return; }
+        else if (Camera.main != null)
+        { transform.rotation = Camera.main.transform.rotation; }
+
         if (hpBar.value > curHP)
         {
             hpBar.value -= 0.1f;

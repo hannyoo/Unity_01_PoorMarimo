@@ -11,6 +11,10 @@ public class nowUI : MonoBehaviour
     public Text[] playerStat;
 
     public Marimo_C marimo;
+    public InputField inputname;
+
+    public hpBarUI hpbarnow;
+    
    
 
     void Start()
@@ -43,11 +47,15 @@ public class nowUI : MonoBehaviour
 
     public void SetPlayerInfo()
     {
-        playerStat[0].text = marimo.playername;
+       hpbarnow = FindObjectOfType<hpBarUI>();
+        playername.text = inputname.text;
         playerStat[2].text = marimo.HP.ToString();
         playerStat[4].text = marimo.Atk.ToString();
         playerStat[6].text = marimo.Dfn.ToString();
         playerStat[8].text = marimo.Gold.ToString();
+        
+        hpbarnow.playerName.text = inputname.text;
+
 
     }
 

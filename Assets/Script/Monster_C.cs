@@ -14,6 +14,7 @@ public class Monster_C : MonoBehaviour
 
     public float hpPosition;
 
+    private Monster_C monster;
 
     void Start()
     {
@@ -21,6 +22,8 @@ public class Monster_C : MonoBehaviour
         Object m_hpbar = Resources.Load("monster_HPbar");
         Instantiate(m_hpbar, transform);
 
+        monster = this;
+        
         monsterHpBarUI = GetComponentInChildren<MonsterHpBarUI>();
         
         // monsterHpBarUI = FindObjectOfType<MonsterHpBarUI>();
@@ -33,6 +36,11 @@ public class Monster_C : MonoBehaviour
         monsterHpBarUI.SetName(monsterName); ////
 
         monsterHpBarUI.transform.position += new Vector3(0,+hpPosition, 0);
+    }
+
+    private void Update()
+    {
+        this.transform.rotation = Quaternion.Euler(Camera.main.transform.rotation.x, Camera.main.transform.rotation.y - 180, Camera.main.transform.rotation.z);
     }
 
     public void onDamaged(Marimo_C marimo)

@@ -18,4 +18,5 @@ public class FollowCamera : MonoBehaviour
        
         this.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 10, player.transform.position.z - 30);
     }
+
 }
