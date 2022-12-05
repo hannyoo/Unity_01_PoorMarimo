@@ -88,14 +88,15 @@ public class Marimo_C : MonoBehaviour
     private void Start()
     {
         GameManager.Instance = this;
-        
+
         // 점프 rigid= GetComponent<Rigidbody>();
         // 점프 isJump = false;
 
+
+        //hpBar prefab찾아서 불러오기
         Object hpBar = Resources.Load("Marimo_HPbar");
         Instantiate(hpBar, transform);//트렌스폼 요상하네
-        //hpBar prefab찾아서 불러오기
-
+        
         hpBarUI = GetComponentInChildren<hpBarUI>();
 
         hpBarUI.SetTotalHP(HP);

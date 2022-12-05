@@ -14,6 +14,11 @@ public class hpBarUI : MonoBehaviour
     Color ogColor = new Color(255,255,255,200);
     //컬러 근본의 근본이 없었다 새색상을 생성해서 근본찾자!
 
+    public void Start()
+    {
+
+    }
+
 
     public void SetName(string playername)
     {
@@ -30,6 +35,8 @@ public class hpBarUI : MonoBehaviour
     public void SetCurHP(int hp)
     { 
         curHP = hp;
+
+
     }
     
 

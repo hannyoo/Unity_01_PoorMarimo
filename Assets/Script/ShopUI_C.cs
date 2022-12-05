@@ -16,9 +16,7 @@ public class ShopUI_C : MonoBehaviour
         shopName = GetComponentInChildren<Text>();
         
         exit = GetComponentInChildren<Button>();
-               
-
-
+     
 
     }
 
