@@ -14,27 +14,6 @@ public class hpBarUI : MonoBehaviour
     Color ogColor = new Color(255,255,255,200);
     //컬러 근본의 근본이 없었다 새색상을 생성해서 근본찾자!
 
-    public GameObject ShopUI = null;
-
-
-
-    public void OpenShop()
-    {
-        if(ShopUI ==null)
-        {
-            Object shopUI = Resources.Load("shop_UI");
-            ShopUI = (GameObject)Instantiate(shopUI);
-        }
-
-    }
-    public void CloseShop()
-    {
-        if (ShopUI != null)
-        {
-            ShopUI.SetActive(false);
-        }
-
-    }
 
     public void SetName(string playername)
     {

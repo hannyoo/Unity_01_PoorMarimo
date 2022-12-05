@@ -98,10 +98,11 @@ public class Marimo_C : MonoBehaviour
         
         hpBarUI = GetComponentInChildren<hpBarUI>();
 
+        hpBarUI.SetName(playername);
         hpBarUI.SetTotalHP(HP); //??
         hpBarUI.SetCurHP(HP);
 
-        hpBarUI.SetName(playername);
+      
 
     }
 
