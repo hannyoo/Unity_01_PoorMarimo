@@ -1,0 +1,25 @@
+  void jump()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            if (!isJump)
+            {
+                isJump = true;
+                rigid.AddForce(Vector3.up * jumpPower * 5, ForceMode.Impulse );
+            }
+            
+            else
+            {
+                return;
+            }
+
+        }       
+        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Ground"))
+        {
+            isJump = false;
+        }
