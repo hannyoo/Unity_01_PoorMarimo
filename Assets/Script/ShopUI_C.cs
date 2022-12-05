@@ -23,8 +23,9 @@ public class ShopUI_C : MonoBehaviour
             Object shopUI = Resources.Load("shop_UI");
             ShopUI = (GameObject)Instantiate(shopUI);
         }
-
+        ShopUI.SetActive(true);
     }
+
     public void CloseShop()
     {
         if (ShopUI != null)

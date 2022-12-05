@@ -120,7 +120,7 @@ public class Marimo_C : MonoBehaviour
                    
         }
 
-        ////?? 안나타남 ㅠ
+        
         ShopUI_C shopUI = collision.gameObject.GetComponent<ShopUI_C > ();
         if (shopUI)
         {
@@ -139,7 +139,8 @@ public class Marimo_C : MonoBehaviour
             hpBarUI.SetCurHP(HP);
 
             OnDamaged(monster.Atk);
-            monster.onDamaged(this); //??
+            monster.onDamaged(this); 
+
                       
         }
 
